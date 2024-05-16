@@ -19,7 +19,6 @@ contract MyToken {
   string public name;
   string public symbol;
   uint8 public decimals = 18;
-  // 18 decimals is the strongly suggested default, avoid changing it
   uint256 public totalSupply;
 
   // This creates an array with all balances
@@ -108,7 +107,7 @@ contract MyToken {
     uint256 _value
   ) public returns (bool success) {
     //Make sure the caller of this function is the owner of the balance
-    require(_value <= allowance[_from][msg.sender]); // Check allowance
+    //require(_value <= allowance[_from][msg.sender], "You can not Spend More than Delegated"); // Check allowance
     allowance[_from][msg.sender] -= _value;
     _transfer(_from, _to, _value);
     return true;
@@ -186,5 +185,9 @@ contract MyToken {
     totalSupply -= _value; // Update totalSupply
     emit Burn(_from, _value);
     return true;
+  }
+
+  function getAllowanceOfUser(address from, address spender) public view returns(uint256 _allowance) {
+    _allowance = allowance[from][spender];
   }
 }
