@@ -2,6 +2,7 @@
 require("hardhat-deploy");
 require("@nomiclabs/hardhat-etherscan")
 
+// The private keys decleared here does not hold any real funds
 
 const api_key = "YGHYNPB1XMTJM9Y1CN98UFE73FXS7T61TK"
 
