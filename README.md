@@ -14,6 +14,7 @@ This project is an implementation of an ERC-20 token using Solidity. The ERC-20 
     - [Compile Contracts](#compile-contracts)
     - [Migrate Contracts](#migrate-contracts)
     - [Interact with Contracts](#interact-with-contracts)
+    - [Run a Local Blockchain Node](#run-a-local-blockchain-node)
   - [Smart Contract Details](#smart-contract-details)
   - [Deployment](#deployment)
   - [License](#license)
@@ -67,7 +68,7 @@ npx hardhat compile
 
 ### Migrate Contracts
 
-To deploy the smart contracts to a local blockchain (using Ganache), run:
+To deploy the smart contracts to a local blockchain (using Hardhat), run:
 
 ```sh
 npx hardhat deploy
@@ -75,24 +76,24 @@ npx hardhat deploy
 
 ### Interact with Contracts
 
-You can interact with the deployed contracts using Truffle console:
+You can interact with the deployed contracts using Hardhat console:
 
 ```sh
 npx hardhat console
 ```
 
-Within the console, you can call the contract functions. For example:
 
-```js
-let token = await MyERC20Token.deployed();
-await token.name();
-await token.symbol();
-await token.totalSupply();
+### Run a Local Blockchain Node
+
+You can run a local blockchain node with the following command :
+```sh
+npx hardhat node
 ```
+
 
 ## Smart Contract Details
 
-The main contract is `MyERC20Token.sol`, which implements the ERC-20 standard and includes the following functionalities:
+The main contract is `MyToken.sol`, which implements the ERC-20 standard and includes the following functionalities:
 
 - **name**: Returns the name of the token.
 - **symbol**: Returns the symbol of the token.
