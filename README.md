@@ -1,6 +1,6 @@
 ## MTK-TOKEN
 
-This project uses nextjs, ethers and wagmi to create a decentralized application that transfers tokens from a senders wallet to a receipients wallet. To interact with this dapp, you will need a to import a private keys that has access to the testnet tokens used in the dapp. 
+This project uses nextjs, ethers and wagmi to create a decentralized application that transfers tokens from a senders wallet to a receipients wallet and authorises user to spend tokens. 
 
 Each folder contains a readme file that talks specifically on what the folder represents. i hope you enjoy this.
 
